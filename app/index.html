@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -15,39 +15,40 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="deployboardFrontendApp">
+  <body ng-app="deployboardFrontendApp" ng-cloak>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
 
-            <a class="navbar-brand" href="#/">deployboardFrontend</a>
-          </div>
+    <!-- header -->
+    <nav class="uk-navbar uk-navbar-attached">
+      <div class="container uk-container">
+        <ul class="uk-navbar-nav">
+          <li>
+            <a href="/#/">Deployboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+    <!-- middle -->
+    <div class="db-middle">
+      <div class="uk-container uk-container-center">
+        <div ng-view=""></div>
       </div>
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
+    <!-- footer -->
+    <div class="db-footer">
+      <div class="uk-container uk-container-center uk-text-center">
+        <ul class="uk-subnav uk-subnav-line">
+          <li>
+            <a href="//github.com/houkago" target="_blank">Houkago</a>
+          </li>
+        </ul>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
     </div>
 
