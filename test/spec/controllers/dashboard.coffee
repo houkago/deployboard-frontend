@@ -1,17 +1,17 @@
 'use strict'
 
-describe 'Controller: AboutCtrl', ->
+describe 'Controller: DashboardCtrl', ->
 
   # load the controller's module
   beforeEach module 'deployboardFrontendApp'
 
-  AboutCtrl = {}
+  MainCtrl = {}
   scope = {}
 
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    AboutCtrl = $controller 'AboutCtrl', {
+    DashboardCtrl = $controller 'DashboardCtrl', {
       $scope: scope
     }
 
